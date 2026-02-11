@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: local-pv
+  labels: local-pv
+spec: 
+  capacity:
+     storage: 1Gi
+  accessModes:
+     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storacgeClassName: local-storage-pv
+  hostpath:
+    path: /mnt/data
