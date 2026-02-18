@@ -4,6 +4,7 @@ metadata:
   name: nginx-todo-ingress
   namespace: nginx
 spec:
+ ingressClassName: nginx
  rules:
  - http:
    paths:
